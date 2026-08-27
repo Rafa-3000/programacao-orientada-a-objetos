@@ -36,6 +36,16 @@ public class Estudante {
         return soma/5.0;
     }
 
+    public double calculaMedia(int[] pesos){
+        double soma=0;
+        int somaPesos=0;
+        for(int i=0;i<5;i++){
+            soma+=notas[i]*pesos[i];
+            somaPesos+=pesos[i];
+        }
+        return soma/somaPesos;
+    }
+
     public double menorNota(){
         double menor_nota=0;
 
