@@ -1,0 +1,30 @@
+package atv_avaliativa1_2tri;
+
+public class Aprovados {
+    public static Estudante[] selecionaAprovados(Estudante[] estudantes){
+        int quantidadeAprovados=0;
+
+        for(int i=0;i<estudantes.length;i++){
+            if(estudantes[i].calculaMedia()>=6){
+                quantidadeAprovados++;
+            }
+        }
+
+        if(quantidadeAprovados==0){
+            return null;
+        }
+
+        Estudante[] aprovados = new Estudante[quantidadeAprovados];
+
+        int posicao=0;
+
+        for(int i=0;i<estudantes.length;i++){
+            if(estudantes[i].calculaMedia()>=6){
+                aprovados[posicao]=estudantes[i];
+                posicao ++;
+            }
+        }
+
+        return aprovados;
+    }
+}
